@@ -8,15 +8,13 @@
 </head>
 <body>
 
-<img src="
-        hyunwookjleeucc.github.io/Activity 3/Images/burger-chips-dinner-70497.jpg
-      ">
+<img src="https://res.cloudinary.com/format-magazine-production/image/upload/c_limit,w_1800,h_1200,f_jpg,f_auto/dpr_1.0/c_scale,w_870,h_580/Mexican_Table_1_slzrja">
 <script>
 	
 
 	const app = new Clarifai.App({ apiKey: '52fd889d4cb440bda6abd6fe3ad4e6c9'});
 
-	app.models.predict("bd367be194cf45149e75f01d59f77ba7", "hyunwookjleeucc.github.io/Activity 3/Images/burger-chips-dinner-70497.jpg").then(
+	app.models.predict("bd367be194cf45149e75f01d59f77ba7", "https://res.cloudinary.com/format-magazine-production/image/upload/c_limit,w_1800,h_1200,f_jpg,f_auto/dpr_1.0/c_scale,w_870,h_580/Mexican_Table_1_slzrja").then(
     function(response) {
     	console.log(response)
       // do something with response
