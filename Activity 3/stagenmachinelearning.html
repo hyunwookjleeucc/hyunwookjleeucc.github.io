@@ -7,8 +7,61 @@
 	<title>Stage N Machine Learning</title>
 </head>
 <body>
+<style>
+	.topbar {
+    overflow-color:white;
+    background-color:white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
 
+  .home {
+    position: fixed;
+    bottom: 180px;
+    left: 640px;
+    z-index: 2000;
+  }
+
+  .home2 {
+  	position: fixed;
+  	top: 10px;
+  	right: 10px;
+  	z-index:2000;
+  }
+  .btn {
+    background-color: lightgrey;
+    border-radius: 20px;
+    font-size: 20px;
+  }
+
+ </style>
+
+</head>
+<body>
+
+<div class = "home">
+  <form  action=
+  	document.getElementById("dataDisplay").innerHTML = response.rawData.output[0];>
+      <input class = "btn" type="button" value="Click to Show Information" />
+  </form>
+</div>
+
+<div class = "home2">
+  <form  action="../index.html">
+      <input class = "btn" type="submit" value="HOME" />
+  </form>
+</div>
+
+<!--Image section -->
+
+<div>
 <img src="https://res.cloudinary.com/format-magazine-production/image/upload/c_limit,w_1800,h_1200,f_jpg,f_auto/dpr_1.0/c_scale,w_870,h_580/Mexican_Table_1_slzrja">
+<p id = "dataDisplay"><p>
+</div>
+
 <script>
 	
 
@@ -17,6 +70,7 @@
 	app.models.predict("bd367be194cf45149e75f01d59f77ba7", "https://res.cloudinary.com/format-magazine-production/image/upload/c_limit,w_1800,h_1200,f_jpg,f_auto/dpr_1.0/c_scale,w_870,h_580/Mexican_Table_1_slzrja").then(
     function(response) {
     	console.log(response)
+
       // do something with response
     },
     function(err) {
@@ -25,6 +79,7 @@
   );
 
 </script>
+
 
 </body>
 </html>
