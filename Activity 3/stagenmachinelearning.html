@@ -8,13 +8,15 @@
 </head>
 <body>
 
-<img src="https://samples.clarifai.com/food.jpg">
+<img src="
+        hyunwookjleeucc.github.io/Activity 3/Images/burger-chips-dinner-70497.jpg
+      ">
 <script>
 	
 
 	const app = new Clarifai.App({ apiKey: '52fd889d4cb440bda6abd6fe3ad4e6c9'});
 
-	app.models.predict("bd367be194cf45149e75f01d59f77ba7", "https://samples.clarifai.com/food.jpg").then(
+	app.models.predict("bd367be194cf45149e75f01d59f77ba7", "hyunwookjleeucc.github.io/Activity 3/Images/burger-chips-dinner-70497.jpg").then(
     function(response) {
     	console.log(response)
       // do something with response
