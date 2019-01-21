@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>JSON Stage 2</title>
+	<title>JSON Stage 4</title>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -22,6 +22,7 @@
 </head>
 <body>
 
+
 <div class = "home">
     <form action = "../index.html">
       <input class = "btn" type="submit" value = "HOME">
@@ -33,6 +34,18 @@
 	var staticUrl = 'https://raw.githubusercontent.com/hyunwookjleeucc/hyunwookjleeucc.github.io/master/Activity%202/stage2JSON.html'; 
 	$.getJSON(staticUrl, function(data) {
 	        console.log(data)
+	        //ALBANIA
+	        console.log(data.fact[1].dims.COUNTRY)
+		    console.log(data.fact[1].dims.GHO)
+		    console.log(data.fact[1].dims.YEAR)
+		    //BREAK
+		    console.log(" ")
+		    console.log("   ")
+		    console.log("    ")
+		    //CANADA
+		    console.log(data.fact[31].dims.COUNTRY)
+		    console.log(data.fact[31].dims.GHO)
+		    console.log(data.fact[31].dims.YEAR)
 	    });
 </script>
 
