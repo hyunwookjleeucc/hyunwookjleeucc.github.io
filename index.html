@@ -1,205 +1,39 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-		<link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
-	<title>Home</title>
+  <!-- Own CSS -->
+  <link rel="stylesheet" href="style.css">
 
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
 
+  <title>Hyunwook Justin Lee</title>
 
-<style>
-	body {
-		background-color: #AEECEF
-	}
-
-    table, td, th {
-      border: 1px solid black;
-      padding: 10px;
-    } 
-    .center {
+    <style>
     
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 5px;
-      margin-bottom: 5px;
-      width: 100%;
-      background-color: #FFD6C0
-    }
-    input {
-      text-align: center;
-      background-color: lightgrey;
-      border-radius: 10px;
-    }
-    
-</style>
-<style type="text/css"></style>
+      body {
+        background-color: #e1e4e4;
+        font-family: "Didact Gothic";
+      }
+    </style>
 
 </head>
 
 
 
-
 <body>
-	
-	<h1>Work Record Page</h1>
-	<h2>Activity 1: UN Sustainability Goals</h2>
 
-	<table>
-		<tbody>
-			<tr>
-				<th>Stage</th>
-				<th>Link</th>
-				<th> Description</th>
-			 </tr>
-			<tr>
-				<td>Stage 1</td>
-				<td>
-					<form action="Activity 1/ungoalstep1.html">
-						<input class="center" type="submit" value="Stage 1 Site" >
-					</form>
-				 </td>
-				<td>"Created template in this step."</td>
-			 </tr>
+<ul class = "topBar">
+    <li><a class="active" onclick = alreadyOnPage()>Home</a></li>
+    <li><a class="active" href="contact.html">Contact</a></li>
+    <li><a class="active" href="WRindex.html">Work Record</a></li>
+</ul>
 
-			<tr>
-				<td>Stage 2</td>
-				<td>
-					<form action="Activity 1/ungoalstep2.html">
-						<input class="center" type="submit" value="Stage 2 Site">
-					</form>
-				 </td>
-				<td>"Implemented the Flip box element (CSS) and placed an image with sentence on the back."</td>
-			 </tr>
-
-			<tr>
-				<td>Stage 3</td>
-				<td>
-					<form action="Activity 1/ungoalstep3.html">
-						<input class="center" type="submit" value="Stage 3 Site">
-					</form>
-				 </td>
-				<td>"Placed the remaining 16 Images and changed the CSS to accomodate for the different image colours."</td>
-			 </tr>
-
-			<tr>
-				<td>Stage 4</td>
-				<td>
-					<form action="Activity 1/ungoalstep4.html">
-						<input class="center" type="submit" value="Stage 4 Site">
-					</form>
-				 </td>
-				<td>"Implemented and tinkered 'flexbox CSS' (djusted the position of the Images)"</td>
-			 </tr>
-
-			<tr>
-				<td>Stage 5</td>
-				<td>
-					<form action="Activity 1/ungoalstep5.html">
-						<input class="center" type="submit" value="Stage 5 Site">
-					</form>
-				 </td>
-				<td>"Dynamic top logo inserted."</td>
-			 </tr>
-
-			<tr>
-				<td>Stage 6</td>
-				<td>
-					<form action="Activity 1/ungoalstep6.html">
-						<input class="center" type="submit" value="Stage 6 Site">
-					</form>
-				 </td>
-				<td>"Made modifications to the top logo to remain on top; however, it covered up the square logo."</td>
-			 </tr>
-
-			<tr>
-				<td>Stage 7</td>
-				<td>
-					<form action="Activity 1/ungoalstep7.html">
-						<input class="center" type="submit" value="Stage 7 Site">
-					</form>
-				 </td>
-				<td>"Fixed the dynamic top logo to adjust the margin according to the window width."</td>
-			 </tr>
-
-		</tbody>
-	</table>
-
-
-
-	<h2>Activity 2: HIV Infection Rates (JSON)</h2>
-
-	<table>
-		<tbody>
-			<tr>
-				<th>Stage</th>
-				<th>Link</th>
-				<th>Short Description</th>
-			 </tr>
-			<tr>
-				<td>Stage 1</td>
-				<td>
-					<form action="Activity 2/stage1JSON.html">
-						<input class="center" type="submit" value="Stage 1 Site">
-					</form>
-				 </td>
-				<td>"In this stage we set up our JSON database, imported JQUERY and tested that JQUERY worked."</td>
-			 </tr>
-
-			 <tr>
-				<td>Stage 2</td>
-				<td>
-					<form action="Activity 2/stage2JSON.html">
-						<input class="center" type="submit" value="Stage 2 Site">
-					</form>
-				 </td>
-				<td>"In this stage we accessed our JSON data and printed it in the console."</td>
-			 </tr>
-
-			 <tr>
-				<td>Stage 3</td>
-				<td>
-					<form action="Activity 2/stage3JSON.html">
-						<input class="center" type="submit" value="Stage 3 Site">
-					</form>
-				 </td>
-				<td>"In this stage we sorted through specific bits of the data. We looked at Canada and Albania specifically."</td>
-			 </tr>
-
-			 <tr>
-				<td>Stage 4</td>
-				<td>
-					<form action="Activity 2/stage4JSON.html">
-						<input class="center" type="submit" value="Stage 4 Site">
-					</form>
-				 </td>
-				<td>"In this stage we brushed up on for loops by running one in the console."</td>
-			 </tr>
-
-
-		</tbody>
-	</table>
-
-	<h3>Activity 3: Machine Learning</h3>
-
-	<table>
-		<tbody>
-			<tr>
-				<th>Name</th>
-				<th>Link</th>
-				<th> Description</th>
-			 </tr>
-			<tr>
-				<td>Stage N: Machine Learning</td>
-				<td>
-					<form action="Activity 3/stagenmachinelearning.html">
-						<input class="center" type="submit" value="Stage N: Machine Learning">
-					</form>
-				 </td>
-				<td>"Started to develop the basics of machine learning"</td>
-			 </tr>
-
-			<tr>
-		</tbody>
-	</table>
+  
+  <script src = "script.js">
+     </script>
 
 </body>
+
 </html>
