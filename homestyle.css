@@ -91,13 +91,10 @@ li:active{
 	font-family: "Staatliches";
 }
 /**********************/
-#snakeGameDropdown {
+#TicTacToeDropdown {
 	top: 100px;
 }
 
-#pongGameDropdown {
-	top: 150px;
-}
 
 .dropDown-content a {
 	float: left;
