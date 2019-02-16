@@ -4,6 +4,7 @@
 <head>
   <!-- Own CSS -->
   <link rel="stylesheet" href="../homestyle.css">
+  <link rel="stylesheet" href="../Games/TicTacToe.css">
 
   <!-- FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
@@ -51,7 +52,9 @@
     </div>
 
 </ul>
-<div class = "center">
+<div class = "Container">
+  <canvas id = "gameCanvas" width = "600" height = "600"></canvas>
+</div>
 	<script>
 	if (document.all||document.getElementById){
 	document.write('<style>.tictac{')
@@ -736,8 +739,6 @@
 	<INPUT TYPE="button" NAME="sqr8" class="tictac" value="     " onClick="if(document.tic.sqr8.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr8.value = ' X '; sqr8T = 1; turn = 1; vari(); check();} else if(document.tic.sqr8.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr8.value = ' X '; sqr8T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr8.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr8.value = ' O '; sqr8T = 1; turn = 1; vari(); player1Check()} drawCheck()">
 	<INPUT TYPE="button" NAME="sqr9" class="tictac" value="     " onClick="if(document.tic.sqr9.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr9.value = ' X '; sqr9T = 1; turn = 1; vari(); check();} else if(document.tic.sqr9.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr9.value = ' X '; sqr9T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr9.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr9.value = ' O '; sqr9T = 1; turn = 1; vari(); player1Check()} drawCheck()">
 	</form>
-
-</div>
 
 </body>
 
