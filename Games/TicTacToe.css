@@ -1,7 +1,6 @@
 .Container {
-	margin-bottom: 500px;
-	margin-left: 90%;
-	margin-right: 90%;
+	top: 100px;
+	left: 100px;
 
 	align-items: center;
 	justify-content: center;
