@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Stage 7 JSON</title>
 
+    
     <style>
         div {
-            height: 50px; 
+            height: 50px;
             width: 0px;
             border-radius: 10px;
             background-color:red;
@@ -16,13 +18,25 @@
             line-height: 50px;
             display: table;
         }
+       
         p {
+        
             margin-left: 10px;
             font-size: 20px;
             vertical-align: middle;
             line-height: 50px;
         }
-            
+        .home {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 2;
+        }
+        .btn {
+            background-color: lightgrey;
+            border-radius: 20px;
+            font-size: 20px;
+        }
         #topbar {
           
             background-color:white;
@@ -36,7 +50,7 @@
             top: 0;
             z-index: 1000;
             width: 100%;
-            height: 200px;
+            height: 80px;
             border-radius:0px;
            
         }
@@ -44,105 +58,89 @@
             
             margin-top:200px;
         }
-
-        .home {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            z-index: 2;
-        }
-        .btn {
-            background-color: lightgrey;
-            border-radius: 20px;
-            font-size: 20px;
-        }    
     </style>
+
 </head>
 <body>
 
-    <div class = "home">
-    <form action = "../index.html">
+<div class = "home">
+    <form action = "../WRindex.html">
       <input class = "btn" type="submit" value = "HOME">
     </form>
 </div>
-
-    <div class = "wrapper">
-     <div id="topbar">
+    
+<div class = "wrapper">
+    <div id="topbar">
         <h1>HIV Infection Rates Compared Proportionally By Country</h1>
      </div>
-     <h2>Input Maximum Number of Infected Individuals</h2>
-    <input type = "number" id="maxdisplay" style = "font-size:2em">
-    </div>
 
-<div id = "content">
-
+    <h2>Input Maximum Number of Infected Individuals</h2>
+    <input type="number" id="maxdisplay" style="font-size:2em">
 </div>
 
-
+<div id = "content">
+ </div>
+    
 
 <script>
+   
     var myData = "";
-    var staticUrl = 'https://raw.githubusercontent.com/hyunwookjleeucc/hyunwookjleeucc.github.io/master/Activity%202/stage2JSON.html'; 
+    var staticUrl = 'https://raw.githubusercontent.com/PMiskew/pmiskew.github.io/master/Activity%202/data/HIVinfection.json';
     var entry = document.getElementById("maxdisplay");
-    var displayContent = document.getElementById("content");
-    console.log(entry);
+    var displayContent = document.getElementById("content"); 
+    console.log(entry)
+    console.log(displayContent)
     function generateDisplay() {
-
+        console.log("GENERATE DISPLAY CALLED")
         while (displayContent.getElementsByTagName("div").length > 0) {
-        
             displayContent.removeChild(displayContent.childNodes[0])
-        
         }
-        
         $.getJSON(staticUrl, function(data) {
-            iw = window.innerWidth - 100; 
-            countryData = data.fact[1].Value;
-            loc = countryData.indexOf("[");
-            val = countryData.substring(0,loc);
-            val = val.replace(/ /g,"");
-            val = parseInt(val);
-            largest = val;
-            console.log(largest)
-            len = data.fact.length;
-            for (i = 0; i < len; i = i + 1) {
-                countryData = data.fact[i].Value;
-                loc = countryData.indexOf("[");
-                val = countryData.substring(0,loc);
-                val = val.replace(/ /g,"");
-                val = parseInt(val);
-                
-                if (isNaN(val) === false && val < entry.value) {
-                    largest = Math.max(largest,val);
-                }
-            }
-            col = ["red","green","blue"];
-            ctr = 0;
             
-            for (i = 0 ; i < len; i = i + 1) {
-                countryData = data.fact[i].Value; 
-                loc = countryData.indexOf("[");
-                val = countryData.substring(0,loc);
-                val = val.replace(/ /g,"");  
-                val = parseInt(val);
-                vals = val/largest*iw;
-                if (isNaN(val) === false && val < entry.value) {
-                    var div = document.createElement("div");
-                    document.getElementById("content").appendChild(div);
-                    div.setAttribute("id","div"+i);  
-                    div.style.width = vals+"px";
-                    var p = document.createElement("p");        
-                    document.getElementById("div"+i).appendChild(p);
-                    document.getElementById("div"+i).style.backgroundColor = col[ctr%3];   
-                    p.setAttribute("id","p"+i);
-                    country = data.fact[i].dims.COUNTRY;                
-                    p.innerHTML = "<pre>"+country+": "+val+"</pre>";
-                    ctr = ctr + 1;
+            console.log(data)
+            iw = window.innerWidth - 100;
+            
+            vstr = data.fact[1].Value;
+            largest = parseInt(vstr.substring(0,vstr.indexOf("[")).replace(" ",""));
+            for (i = 0; i < 194; i++) {
+                vstr = data.fact[i].Value;
+                cval = parseInt(vstr.substring(0,vstr.indexOf("[")).replace(" ",""));
+                if (isNaN(cval) === false && cval < entry.value) {
+                    largest = Math.max(largest,cval)
                 }
+                    
+                
+            
             }
-          
+            for (i = 0; i < 194; i++) {
+                col = ["red","green","blue"];
+                
+                vstr = data.fact[i].Value;
+                cval = parseInt(vstr.substring(0,vstr.indexOf("[")).replace(" ",""));
+                
+                if (isNaN(cval) === false && cval < entry.value) {
+              
+                    var div = document.createElement("div");
+                    div.setAttribute("id","div"+i);
+                
+                    val1 = parseInt(cval/largest*iw);
+                    document.getElementById("content").appendChild(div);                
+                
+                    document.getElementById("div"+i).style.width = val1+"px";
+                    document.getElementById("div"+i).style.backgroundColor = col[i%3];
+                                
+                    var p = document.createElement("p");
+                    p.setAttribute("id","p"+i);
+                    tcountry = String(data.fact[i].dims.COUNTRY);
+                    document.getElementById("div"+i).appendChild(p);
+                    document.getElementById("p"+i).innerHTML = "<pre>"+tcountry+" - "+cval+"</pre>";    
+                    
+                }
+           
+            }
         });
     }
-    maxdisplay.addEventListener("change",generateDisplay);
+    maxdisplay.addEventListener("change", generateDisplay);
 </script>
 </body>
 </html>

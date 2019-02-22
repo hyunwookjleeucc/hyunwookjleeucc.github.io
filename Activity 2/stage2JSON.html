@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>JSON Stage 2</title>
+	<title>Stage 2 JSON </title>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -23,14 +23,14 @@
 <body>
 
 <div class = "home">
-    <form action = "../index.html">
+    <form action = "../WRindex.html">
       <input class = "btn" type="submit" value = "HOME">
     </form>
 </div>
 
 <script>
 	var myData = "";
-	var staticUrl = 'https://raw.githubusercontent.com/hyunwookjleeucc/hyunwookjleeucc.github.io/master/Activity%202/stage2JSON.html'; 
+	var staticUrl = 'https://raw.githubusercontent.com/nBidari/nBidari.github.io/master/Activity%202/data/data.json'; 
 	$.getJSON(staticUrl, function(data) {
 	        console.log(data)
 	    });

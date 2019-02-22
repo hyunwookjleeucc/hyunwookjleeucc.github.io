@@ -1,111 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <title>Stage 5 JSON </title>
+	<title>Stage 5 JSON</title>
 
-    <style>
-        div {
-            height: 50px; 
-            width: 0px;
-            border-radius: 10px;
-            background-color:red;
-        }
-        h1 {
-            margin: auto;
-            line-height: 50px;
-            display: table;
-        }
-        p {
-            margin-left: 10px;
-            font-size: 20px;
-            vertical-align: middle;
-            line-height: 50px;
-        }
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-        .home {
-        	position: fixed;
-       		top: 10px;
-        	right: 10px;
-        	z-index: 2;
-        }
-    	.btn {
-        	background-color: lightgrey;
-        	border-radius: 20px;
-        	font-size: 20px;
-    	}
-                
-    </style>
+	<style>
+		.home {
+	    	position: fixed;
+	   		top: 10px;
+	    	right: 10px;
+	    	z-index: 2;
+	    }
+		.btn {
+	    	background-color: lightgrey;
+	    	border-radius: 20px;
+	    	font-size: 20px;
+		}
+	</style>
+
 </head>
 <body>
 
+
 <div class = "home">
-    <form action = "../index.html">
+    <form action = "../WRindex.html">
       <input class = "btn" type="submit" value = "HOME">
     </form>
 </div>
 
-<h1>HIV Infection Rates Compared Proportionally By Country</h1>
+<h1>HIV Infection Rates Compared Proportionally By Country<h1>
 
-
-<div id = "content">
-
-</div>
-
-
+<div id = "content"><p></p>
+   </div>
 
 <script>
-    var myData = "";
-    var staticUrl = 'https://raw.githubusercontent.com/hyunwookjleeucc/hyunwookjleeucc.github.io/master/Activity%202/stage2JSON.html'; 
+	var myData = "";
+	var staticUrl = 'https://raw.githubusercontent.com/PMiskew/pmiskew.github.io/master/Activity%202/data/HIVinfection.json'; 
+    //The $ sign is a way of accessing your JQuery functions.  In this case
+    //we are accessing the function getJSON. We set the URL to the address
+    //and data is the variable that generates the information
     $.getJSON(staticUrl, function(data) {
-        iw = window.innerWidth - 100;
-        countryData = data.fact[1].Value;
-        loc = countryData.indexOf("[");
-        val = countryData.substring(0,loc);
-        val = val.replace(/ /g,"");
-        val = parseInt(val);
-        largest = val;
-        console.log(largest)
-        len = data.fact.length;
-        for (i = 0; i < len; i = i + 1) {
-            countryData = data.fact[i].Value;
-            //console.log(countryData);
-            loc = countryData.indexOf("[");
-            //console.log(loc);
-            val = countryData.substring(0,loc);
-            //console.log(val);
-            val = val.replace(/ /g,"");
-            //console.log(val);
-            val = parseInt(val);
-            //isNaN(45) --> False
-            //isNaN(NaN) --> True
-            
-            if (isNaN(val) === false) {
-                largest = Math.max(largest,val);
-            }
-        }
         
-        for (i = 0 ; i < len; i = i + 1) {
-            countryData = data.fact[i].Value; 
-            loc = countryData.indexOf("[");
-            val = countryData.substring(0,loc);
-            val = val.replace(/ /g,"");  
-            val = parseInt(val);
-            vals = val/largest*iw;
-            if (isNaN(vals) === false) {
-                var div = document.createElement("div");
-                document.getElementById("content").appendChild(div);
-                div.setAttribute("id","div"+i);  
-                div.style.width = vals+"px";
-                var p = document.createElement("p");        
-                document.getElementById("div"+i).appendChild(p);                
-                p.setAttribute("id","p"+i);
-                country = data.fact[i].dims.COUNTRY;                
-                p.innerHTML = "<pre>"+country+": "+val+"</pre>";
-            }
-        }
-      
+    	//the window object contains all the information about the current tab. 
+   		iw = window.innerWidth - 100; //access the width of the inner window
+        
+       
+   		vals = []
+    	for (i = 0; i < 193; i++) {
+			country = data.fact[i].Value;
+	        val = parseInt(country.substring(0,country.indexOf("[")).replace(" ",""))
+	        
+	        document.getElementById("content").style.width = val+"px";
+			document.getElementById("p1").innerHTML += "<pre>" + data.fact[i].dims.COUNTRY + " : " + val + "</pre>"
+			vals.push(val)
+		}
+		largest = Math.max(largest, vals)
     });
+    
 </script>
+
+
 </body>
 </html>
