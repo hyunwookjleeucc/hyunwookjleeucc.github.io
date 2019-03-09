@@ -1,47 +1,643 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <head>
-  <!-- Own CSS -->
+   <title>HJL</title>
+
   <link rel="stylesheet" href="homestyle.css">
 
-  <!-- FONTS -->
-  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+<link rel='icon' href='favicon (1).ico' type='image/x-icon'/ >
+<style>
+body {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  margin:0;
+  background-color:#f1f0f3;
+}
+.header {
+  background-image: url("http://hdqwalls.com/wallpapers/anime-minimalism-4k-4e.jpg");
+  animation-name: fadein;
+  object-fit: cover;
+  text-align: left;
+  object-fit: cover;
+  background-size: 100%;
+  padding-bottom:300px;
+  padding-top:100px;
+  padding-left:100px;
+  font-size:24px;
+  color:  #95F2D9;
+  font-family: "Didact Gothic";
+  font-weight: 300;
+  animation:1s;
+  animation-name:fadein;
+} 
+@keyframes fadein {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+#big {
+  font-size:35pt;
+  font-family: "Didact Gothic", sans-serif;
+}
+#small {
+  font-size:12pt;
+  font-family: "Didact Gothic", sans-serif;
+  line-height: 14px;
+  color:white;
+}
+#smaller{
+  color:rgba(0,0,0,0.54);
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 14px;
+  padding:14px;
+  margin-top:40px;
+  background-color:white;
+}
+#smaller:hover{
+  animation-name: buttonhover;
+  animation-duration: 3s;
+}
+@keyframes buttonhover {
+  from {background-color: white}
+  to {background-color: darkgray}
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding:0;
+  overflow: hidden;
+  background-color: white;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.19);
+  animation-name: fadein;
+  animation-duration: 2s;
+  z-index: 10;
+}
 
-  <title>Hyunwook Justin Lee</title>
+li a {
+  display: block;
+  color: rgba(0,0,0,0.54);
+  font-weight:500;
+  font-size: 13px;
+  font-stretch:100%;
+  text-align: center;
+  padding-left:25px;
+  padding-right:25px;
+  padding-top:25px;
+  padding-bottom:25px;
+  text-decoration: none;
+  float: right;
+  position: sticky;
+}
+#special:hover {
+  animation-name: logohover;
+  animation-duration: 4s;
+}
+#soundcloud {
+  padding-top:100px;
+}
+@keyframes logohover {
+  from {background-color: white;
+    color:black;}
+  to {background-color: black;
+    color:white;}
+}
+@keyframes hover {
+  from {background-color: white;}
+  to {background-color: #D7D7D7;}
+}
+li a:hover {
+  animation-name: hover;
+  animation-duration: 4s;
+}
+.active {
+}
+* {
+  box-sizing: border-box;
+}
+.row {
+  background-color:#f1f0f3;
+  margin-bottom:150px;
+  position:static;
+}
+.row > .column {
+  padding: 0 8px;
+}
+.row:after {
+  content: "";
+  display: table;
+}
+.column {
+  float: left;
+  width: 20%;
+  margin:20px;
+  margin-left:40px;
+}
+img {
+  margin-bottom: -4px;
+  filter: contrast(75%);
+}
+img.hover-shadow {
+  transition: 1s;
+}
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.19);
+  filter: contrast(120%)saturate(120%);
+}
+.headingtext {
+  text-align:center;
+  font-family:"Montserrat";
+  font-size:20px;
+  padding-bottom:10px;
+}
+.headingtext1 {
+  text-align:center;
+  font-family:"Montserrat";
+  font-size:14px;
+  color:rgba(0,0,0,0.54);
+  padding-bottom:30px;
+}
+.overlay {
+  opacity:0;
+  transition:1s;
+}
+.column:hover .overlay {
+  opacity: 1;
+}
+.text {
+  text-align:center;
+  padding-top:23px;
+  color:red;
+  font-family:"Lato";
+}
+.uav {
+  text-align:center;
+  font-size:12px;
+  padding-top: 10px;
+  font-family:"Lato";
+  color:red;
+}
 
-    <style>
-    
-      body {
-        background-color: #e1e4e4;
-        font-family: "Didact Gothic";
-      }
 
-      
-    </style>
+ul.specul {
+  position:absolute;
+  background-color:#f1f0f3;
+  top:1100px;
+  display:flex;
+  margin:0;
+  padding-top:80px;
+  width:100%;
+  height:50%;
+  justify-content: center;
+}
+ul.specul li.spec {
+  list-style:none;
+  margin:0 5px;
+}
+ul.specul li.spec a.speca .fa {
+  font-size: 40px;
+  color: blue;
+  padding-top:0px;
+  transition: .5s;
+  padding-right: 3px;
+}
+ul.specul li.spec a.speca span {
+  font-family:"lato";
+  transform: translateY(-7.5px);
+  padding:0;
+  margin-top:0;
+  position:absolute;
+  color: #262626;
+  letter-spacing: 2px;
+  transition: .5s;
+}
+ul.specul li.spec a.speca {
+  text-decoration: none;
+  display:absolute;
+  display:block;
+  width:105px;
+  height:40px;
+  background: #fff;
+  text-align:left;
+  padding-left: 10px;
+  transform: rotate(-30deg) skew(25deg) translate(0,0);
+  transition:.5s;
+  box-shadow: -20px 20px 10px rgba(0,0,0,.5);
+}
+ul.specul li.spec a.speca:before {
+  content: '';
+  position: absolute;
+  top:10px;
+  left:-20px;
+  height:100%;
+  width:20px;
+  background: #b1b1b1;
+  transform: .5s;
+  transform: rotate(0deg) skewY(-45deg);
+}
+ul.specul li.spec a.speca:after {
+  content: '';
+  position: absolute;
+  bottom:-20px;
+  left:-10px;
+  height:20px;
+  width:100%;
+  background: #b1b1b1;
+  transform: .5s;
+  transform: rotate(0deg) skewX(-45deg);
+}
+ul.specul li.spec a.speca:hover {
+  transform: rotate(-30deg) skew(25deg) translate(20px,-15px);
+  box-shadow: -50px 50px 50px rgba(0,0,0,.5);
+}
+ul.specul li.spec:hover .fa {
+  color:#fff;
+}
+ul.specul li.spec:hover span {
+  color:#fff;
+}
+ul.specul li.spec:hover:nth-child(2) a.speca:before{
+  background: #365492;
+}
+ul.specul li.spec:hover:nth-child(2) a.speca:after{
+  background: #4a69ad;
+}
+ul.specul li.spec:hover:nth-child(3) a.speca:before{
+  background: #097aa5;
+}
+ul.specul li.spec:hover:nth-child(3) a.speca:after{
+  background: #53b9e0;
+}
+ul.specul li.spec:hover:nth-child(4) a.speca:before{
+  background: #b33a2b;
+}
+ul.specul li.spec:hover:nth-child(4) a.speca:after{
+  background: #e66a5a;
+}
+ul.specul li.spec:hover:nth-child(5) a.speca:before{
+  background: #d81c3f;
+}
+ul.specul li.spec:hover:nth-child(5) a.speca:after{
+  background: #e46880;
+}
 
+body {font-family: Arial, Helvetica, sans-serif;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 15px
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
 </head>
-
-
-
 <body>
 
-<ul class = "topBar">
-    <li><a class="active" onclick = alreadyOnPage()>Home</a></li>
-    <li><a class="active" href="WRindex.html">Work Record Page</a></li>
+<ul>
+  <li><a href="Games/TicTacToe.html">GAMES</a></li>
+  <li><a href="WRindex.html">WORK RECORD</a></li>
+  <li><a class="active" href="#home">HOME</a></li>
+  <li><a href="index.html" id="special"class="left" style="float:left;">JLEE</a></li>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
 
-     <div class = "dropDown">
-      <li><a class = "dropBtn">Fun</a></li>
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
 
-      <div class = "dropDown-content"">
-        <a href="Games/TicTacToe.html">TicTacToe</a>
-      </div>
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
 
-  	</div>
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 25%;
+  border-radius: 50%;
+
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="Wallpapers copy/img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit" href="#home">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+
+var modal = document.getElementById('id01');
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 </ul>
 
-  
+<div class="header" id="home">
+  <p id="big"><b>Justin Lee</b></p>
+  <p id="small">This is my website that I designed. It is the first website I ever made, so it is not perfect. Enjoy!</p>
+  <p></p>
+
+</div>
+
+<p class="headingtext"> My Work </p>
+<p class="headingtext1"> Click on one of the boxes below to view. </p>
+
+<div class="row" id="row">
+  <div class="column">
+    <a href="https://github.com/hyunwookjleeucc" style="text-decoration:none;">
+    <img src="Wallpapers copy/binary-code-minimalism-eg-2560x1440.jpg" style="width:100%" onclick="" class="hover-shadow cursor">
+    <div class="overlay">
+      <div class="text">Code</div>
+    </div>
+  </div>
+
+ 
+  <div class="column">
+    <a href="https://sites.google.com/ucc.on.ca/year9designcoding-hjlee/home" style="text-decoration:none;">
+    <img src="Wallpapers copy/CodingSite.jpg" style="width:100%" onclick="" class="hover-shadow cursor">
+    <div class="overlay">
+      <div class="text">Google Site</div>
+    </div>
+   </div>
+
+  <div class="column">
+    <a href="https://www.youtube.com/channel/UCsONNeMV7co_n6YAYujkXVw?view_as=subscriber" style="text-decoration:none;">
+    <img src="Wallpapers copy/YouTubelogo.jpg" style="width:100%" onclick="" class="hover-shadow cursor">
+    <div class="overlay">
+      <div class="text">YouTube</div>
+    </div>
+  </div>
+
+
+  <div class="column">
+     <a href="WRindex.html" style="text-decoration:none;">
+    <img src="Wallpapers copy/Work.jpg" style="width:100%" zoom = 5 onclick="" class="hover-shadow cursor">
+    <div class="overlay">
+      <div class="text">Work Record</div>
+    </div>
+  </div>
+
+</div>
+
+
+<ul class="specul">
+  <li class="spec" style="transform:translateX(50px);">
+  <li class="spec">
+    <a class = "speca"href="https://sites.google.com/ucc.on.ca/year9designcoding-hjlee/home">
+      <i class="fa fa-google-plus" aria-hidden="true"></i>
+      <span> Google Site </span>
+    </a>
+  </li>
+
+  <li class="spec">
+    <a class = "speca"href="mailto:justin.lee22@ucc.on.ca">
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+      <span> Contact</span>
+    </a>
+  </li>
+
+</ul>
 
 </body>
-
 </html>
