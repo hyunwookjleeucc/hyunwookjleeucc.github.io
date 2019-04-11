@@ -1,26 +1,97 @@
 body {
   font-size: 18px;
-  font-family: 'Proxima Nova', sans-serif;
+  font-family: 'Proxima Nova';
   margin:0;
   background-color:#f1f0f3;
 }
-.header {
-  background-image: url("http://hdqwalls.com/wallpapers/anime-minimalism-4k-4e.jpg");
+.header0 {
+  background-image: (Wallpapers copy/'4.png')
   animation-name: fadein;
   object-fit: cover;
-  text-align: left;
+  text-align: center;
   object-fit: cover;
   background-size: 100%;
-  padding-bottom:300px;
-  padding-top:100px;
-  padding-left:100px;
   font-size:24px;
   color:  #95F2D9;
   font-family: "Proxima Nova";
   font-weight: 300;
   animation:1s;
   animation-name:fadein;
+  padding-top: 40px;
 } 
+
+.header1 {
+  background-image: (Wallpapers copy/'4.png')
+  animation-name: fadein;
+  object-fit: cover;
+  text-align: center;
+  object-fit: cover;
+  background-size: 100%;
+  font-size:24px;
+  color:  red;
+  font-family: "Proxima Nova";
+  font-weight: 300;
+  animation:1s;
+  animation-name:fadein;
+  padding-top: 40px;
+} 
+
+.header2 {
+  background-image: (Wallpapers copy/'4.png')
+  animation-name: fadein;
+  object-fit: cover;
+  text-align: center;
+  object-fit: cover;
+  background-size: 100%;
+  font-size:24px;
+  color:  green;
+  font-family: "Proxima Nova";
+  font-weight: 300;
+  animation:1s;
+  animation-name:fadein;
+  padding-top: 40px;
+} 
+
+.header3 {
+  background-image: (Wallpapers copy/'4.png')
+  animation-name: fadein;
+  object-fit: cover;
+  text-align: center;
+  object-fit: cover;
+  background-size: 100%;
+  font-size:24px;
+  color:  purple;
+  font-family: "Proxima Nova";
+  font-weight: 300;
+  animation:1s;
+  animation-name:fadein;
+  padding-top: 40px;
+} 
+
+.footer {
+  position: block;
+  float: bottom;
+  height:40px ;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #4286f4;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.notepad{
+  margin-left: 170px;
+}
+
 @keyframes fadein {
   from {
     opacity:0;
@@ -42,7 +113,7 @@ body {
 #smaller{
   color:rgba(0,0,0,0.54);
   font-size: 13px;
-  font-family: 'Proima Nova', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   line-height: 14px;
   padding:14px;
   margin-top:40px;
@@ -143,16 +214,23 @@ img.hover-shadow {
 }
 .headingtext {
   text-align:center;
-  font-family:"Montserrat";
-  font-size:20px;
+  font-family:"Proxima Nova";
+  font-size:26px;
   padding-bottom:10px;
 }
 .headingtext1 {
   text-align:center;
-  font-family:"Montserrat";
+  font-family:"Proxima Nova";
   font-size:14px;
   color:rgba(0,0,0,0.54);
   padding-bottom:30px;
+}
+.bodytext {
+  font-family:"Proxima Nova";
+  font-size: 18px;
+  padding-bottom: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .overlay {
   opacity:0;
@@ -165,13 +243,13 @@ img.hover-shadow {
   text-align:center;
   padding-top:23px;
   color:red;
-  font-family:"Lato";
+  font-family:"Proxima Nova";
 }
 .uav {
   text-align:center;
   font-size:12px;
   padding-top: 10px;
-  font-family:"Lato";
+  font-family:"Proxima Nova";
   color:red;
 }
 
@@ -199,7 +277,7 @@ ul.specul li.spec a.speca .fa {
   padding-right: 3px;
 }
 ul.specul li.spec a.speca span {
-  font-family:"lato";
+  font-family:"Proxima Nova";
   transform: translateY(-7.5px);
   padding:0;
   margin-top:0;
@@ -278,7 +356,6 @@ ul.specul li.spec:hover:nth-child(5) a.speca:after{
   background: #e46880;
 }
 
-body {font-family: Arial, Helvetica, sans-serif;}
 
 input[type=text], input[type=password] {
   width: 100%;
@@ -392,12 +469,6 @@ span.psw {
   }
 }
 
-
-
-
-
-body {font-family: Arial, Helvetica, sans-serif;}
-
 input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
@@ -510,4 +581,146 @@ span.psw {
   }
 }
 
+/*sidebar code*/
 
+.sidenav0 {
+  height: 30%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: -300;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  padding-top: 20px;
+  opacity: 0.1;
+  border-radius: 10px;
+}
+
+.sidenav0 a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'Proxima Nova';
+  color: #111111;
+  display: block;;
+}
+
+.sidenav0:hover {
+  opacity:1;
+}
+
+.sidenav0 a:hover {
+  color: #95F2D9;
+}
+
+.sidenav1 {
+  height: 30%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: -300;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  padding-top: 20px;
+  opacity: 0.1;
+  border-radius: 10px;
+}
+
+.sidenav1 a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'Proxima Nova';
+  color: #111111;
+  display: block;;
+}
+
+.sidenav1:hover {
+  opacity:1;
+}
+
+.sidenav1 a:hover {
+  color: red;
+}
+
+.sidenav2 {
+  height: 30%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: -300;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  padding-top: 20px;
+  opacity: 0.1;
+  border-radius: 10px;
+}
+
+.sidenav2 a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'Proxima Nova';
+  color: #111111;
+  display: block;;
+}
+
+.sidenav2:hover {
+  opacity:1;
+}
+
+.sidenav2 a:hover {
+  color: green;
+}
+
+.sidenav3 {
+  height: 30%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: -300;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  padding-top: 20px;
+  opacity: 0.1;
+  border-radius: 10px;
+}
+
+.sidenav3 a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'Proxima Nova';
+  color: #111111;
+  display: block;;
+}
+
+.sidenav3:hover {
+  opacity:1;
+}
+
+.sidenav3 a:hover {
+  color: purple;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.headingtext {
+  text-align:center;
+  font-family:"Proxima Nova";
+  font-size:20px;
+  padding-bottom:10px;
+}
