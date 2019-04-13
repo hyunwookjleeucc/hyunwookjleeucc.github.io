@@ -92,6 +92,11 @@ body {
   margin-left: 170px;
 }
 
+.equalityimg {
+
+	margin-left: 40px;
+}
+
 @keyframes fadein {
   from {
     opacity:0;
